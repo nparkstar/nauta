@@ -98,6 +98,12 @@ def modify_dockerfile(experiment_folder: str, experiment_name: str, username: st
                 tf_image_repository = f'{NAUTA_REGISTRY_ADDRESS}/{tf_image_name}'
                 dockerfile_temp_content = dockerfile_temp_content + f'FROM {tf_image_repository}'
 
+            elif line.startswith("FROM nauta/deepcell"):
+                nauta_config_map = NAUTAConfigMap()
+                dc_image_name = nauta_config_map.dc_image_name
+                dc_image_repository = f'{NAUTA_REGISTRY_ADDRESS}/{dc_image_name}'
+                dockerfile_temp_content = dockerfile_temp_content + f'FROM {dc_image_repository}'
+
             elif line.startswith("FROM nauta/horovod"):
                 nauta_config_map = NAUTAConfigMap()
                 horovod_image_name = nauta_config_map.py3_horovod_image_name

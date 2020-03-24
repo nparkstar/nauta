@@ -105,6 +105,7 @@ class NAUTAConfigMap:
     REGISTRY_FIELD = 'registry'
     PLATFORM_VERSION = 'platform.version'
     PY3_IMAGE_NAME = 'image.tensorflow_1.12_py3'
+    DC_IMAGE_NAME = 'image.deepcell'
     PY3_HOROVOD_IMAGE_CONFIG_KEY = 'image.horovod'
     MINIMAL_NODE_MEMORY_AMOUNT = 'minimal.node.memory.amount'
     MINIMAL_NODE_CPU_NUMBER = 'minimal.node.cpu.number'
@@ -126,6 +127,7 @@ class NAUTAConfigMap:
                                                             config_map_data[self.IMAGE_TENSORBOARD_SERVICE_FIELD])
             self.platform_version = config_map_data.get(self.PLATFORM_VERSION)
             self.py3_image_name = config_map_data.get(self.PY3_IMAGE_NAME)
+            self.dc_image_name = config_map_data.get(self.DC_IMAGE_NAME)
             self.py3_horovod_image_name = config_map_data.get(NAUTAConfigMap.PY3_HOROVOD_IMAGE_CONFIG_KEY)
             self.minimal_node_memory_amount = config_map_data.get(NAUTAConfigMap.MINIMAL_NODE_MEMORY_AMOUNT)
             self.minimal_node_cpu_number = config_map_data.get(NAUTAConfigMap.MINIMAL_NODE_CPU_NUMBER)

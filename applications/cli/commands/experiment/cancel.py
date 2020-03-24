@@ -62,7 +62,8 @@ def cancel(ctx: click.Context, name: str, match: str, purge: bool, pod_ids: str,
     Cancels chosen experiments based on a name provided as a parameter.
     """
     if not listed_runs_kinds:
-        listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER]
+        #listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER]
+        listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER, RunKinds.DEEPCELL]
 
     # check whether we have runs with a given name
     if name and match:
