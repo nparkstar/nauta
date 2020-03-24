@@ -27,7 +27,8 @@ from platform_resources.run import RunKinds
 
 logger = initialize_logger(__name__)
 
-LOG_RUNS_KINDS = [RunKinds.TRAINING, RunKinds.JUPYTER]
+#LOG_RUNS_KINDS = [RunKinds.TRAINING, RunKinds.JUPYTER]
+LOG_RUNS_KINDS = [RunKinds.TRAINING, RunKinds.JUPYTER, RunKinds.DEEPCELL]
 
 
 @click.command(help=Texts.HELP, short_help=Texts.SHORT_HELP, cls=AliasCmd, alias='lg', options_metavar='[options]')

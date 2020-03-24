@@ -45,6 +45,7 @@ class RunKinds(Enum):
     TRAINING = "training"
     JUPYTER = "jupyter"
     INFERENCE = "inference"
+    DEEPCELL = "deepcell"
 
 
 class RunStatus(Enum):

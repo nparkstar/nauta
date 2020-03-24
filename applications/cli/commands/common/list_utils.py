@@ -65,7 +65,8 @@ def list_unitialized_experiments_in_cli(verbosity_lvl: int, all_users: bool,
     """
 
     if not listed_runs_kinds:
-        listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER]
+        #listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER]
+        listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER, RunKinds.DEEPCELL]
 
     try:
         namespace = None if all_users else get_kubectl_current_context_namespace()

@@ -73,7 +73,8 @@ RUN_SUBMITTER = "Owner"
 RUN_TEMPLATE_NAME = "Template name"
 RUN_TEMPLATE_VERSION = "Template version"
 
-JUPYTER_NOTEBOOK_TEMPLATES_NAMES = ["jupyter", "jupyter-py2"]
+#JUPYTER_NOTEBOOK_TEMPLATES_NAMES = ["jupyter", "jupyter-py2"]
+JUPYTER_NOTEBOOK_TEMPLATES_NAMES = ["jupyter", "jupyter-py2", "deepcell"]
 
 EXP_SUB_SEMAPHORE_FILENAME = ".underSubmission"
 
