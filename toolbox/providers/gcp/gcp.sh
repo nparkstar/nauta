@@ -477,7 +477,7 @@ if [ "${CompilePlatformOnCloud}" = "true" ]; then
     transfer_scripts
     transfer_config_files
     VERSION_MAJOR=1
-    VERSION_MINOR=0
+    VERSION_MINOR=1
     VERSION_NO=0
     VERSION_ID=`date +"%Y%m%d%H%M%S"`
     VERSION_SUFFIX=oss
