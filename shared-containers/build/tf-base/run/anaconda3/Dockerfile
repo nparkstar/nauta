@@ -4,10 +4,10 @@ RUN conda install nb_conda
 
 # Create the environment:
 COPY env_tf1.yml /root/
-RUN conda env create -f env_tf1.yml
+RUN conda env create -f /root/env_tf1.yml
 
 COPY env_tf2.yml /root/
-RUN conda env create -f env_tf2.yml
+RUN conda env create -f /root/env_tf2.yml
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY notebooks /notebooks
