@@ -118,7 +118,7 @@ local_images:
     method: build
     directory: "{{ playbook_dir }}/../../nauta-containers/tensorflow/anaconda3"
     args:
-      TENSORFLOW_VERSION: 1.14
+      TENSORFLOW_VERSION: 1.14.0
   nauta/horovod/py3:
     version: "1.9.0-py3"
     required:
