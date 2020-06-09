@@ -47,6 +47,14 @@ shared_images:
     push: False
     args:
       PYTHON_VERSION: 3.6
+  shared/run/anaconda3:
+    version: "anaconda3"
+    required: {}
+    method: build
+    directory: "{{ playbook_dir }}/../../shared-containers/build/tf-base/run/anaconda3"
+    push: False
+    args:
+      PYTHON_VERSION: 3.7
   shared/build/consul:
     version: "v1.1.0"
     required: {}
