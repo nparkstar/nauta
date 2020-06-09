@@ -1,9 +1,8 @@
-name: tf2
+name: tf1
 channels:
   - conda-forge
 dependencies:
   - python=3.6
-  - nb_conda
   - Pillow=5.4
   - h5py=2.9
   - ipykernel=5.1
@@ -14,4 +13,4 @@ dependencies:
   - scipy=1.2
   - scikit-learn=0.20
   - pandas=0.23
-  - tensorflow=2.1
+  - tensorflow=1.14

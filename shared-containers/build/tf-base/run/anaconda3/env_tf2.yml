@@ -3,7 +3,6 @@ channels:
   - conda-forge
 dependencies:
   - python=3.6
-  - nb_conda
   - Pillow=5.4
   - h5py=2.9
   - ipykernel=5.1
