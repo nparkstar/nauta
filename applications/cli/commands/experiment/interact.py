@@ -122,12 +122,18 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
             exp_name = name
             if not name and not filename:
                 if template == "deepcell":
+                    # added by npark
+                    run_kind_name=RunKinds.DEEPCELL
                     exp_name = generate_name("dc")
                 else:
+                    # added by npark
+                    run_kind_name = RunKinds.JUPYTER
                     exp_name = generate_name("jup")
 
             click.echo(Texts.SUBMITTING_EXPERIMENT_USER_MSG)
-            runs, runs_errors, filename = submit_experiment(run_kind=RunKinds.JUPYTER, script_location=filename,
+            # modified by npark
+            # runs, runs_errors, filename = submit_experiment(run_kind=RunKinds.JUPYTER, script_location=filename,
+            runs, runs_errors, filename = submit_experiment(run_kind=run_kind_name, script_location=filename,
                                                             script_folder_location=None, template=template,
                                                             name=exp_name, parameter_range=[], parameter_set=(),
                                                             script_parameters=(), pack_params=pack_param,
