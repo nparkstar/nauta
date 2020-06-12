@@ -169,7 +169,7 @@ test-with-code-cov: $(DEV_VIRTUALENV_MARK)
 	@. $(ACTIVATE); LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 py.test --cov=. --cov-config tox.ini --cov-report term-missing
 
 VERSION_CLIENT_MAJOR ?= 1
-VERSION_CLIENT_MINOR ?= 0
+VERSION_CLIENT_MINOR ?= 1
 VERSION_CLIENT_NO ?= 0
 VERSION_SUFFIX ?= oss
 
