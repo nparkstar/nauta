@@ -124,10 +124,12 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
                 if template == "deepcell":
                     # added by npark
                     run_kind_name=RunKinds.DEEPCELL
+                    nauta_app_name=NAUTAAppNames.DEEPCELL
                     exp_name = generate_name("dc")
                 else:
                     # added by npark
                     run_kind_name = RunKinds.JUPYTER
+                    nauta_app_name = NAUTAAppNames.JUPYTER
                     exp_name = generate_name("jup")
 
             click.echo(Texts.SUBMITTING_EXPERIMENT_USER_MSG)
@@ -188,7 +190,8 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
         sys.exit(1)
 
     try:
-        launch_app(k8s_app_name=NAUTAAppNames.JUPYTER, app_name=name, no_launch=no_launch,
+        # launch_app(k8s_app_name=NAUTAAppNames.JUPYTER, app_name=name, no_launch=no_launch,
+        launch_app(k8s_app_name=nauta_app_name, app_name=name, no_launch=no_launch,
                    number_of_retries=number_of_retries, url_end=url_end, port=port_number)
     except LaunchError as exe:
         handle_error(logger, exe.message, exe.message)
