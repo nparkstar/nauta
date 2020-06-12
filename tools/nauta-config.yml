@@ -14,6 +14,8 @@ export_images:
     value: "{{ image_local_url['nauta/tensorflow/1.12.0py3/base'] }}"
   - name: tensorflow_1.12_py3
     value: "{{ image_local_url['nauta/tensorflow/1.12.0py3/base'] }}"
+  - name: deepcell
+    value: "{{ image_local_url['nauta/anaconda3'] }}"
   - name: activity-proxy
     value: "{{ image_local_url['nauta/activity-proxy'] }}"
   - name: batch-inference
