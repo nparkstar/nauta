@@ -2,15 +2,15 @@
 
 * Train model (adjust resources to environment, increase number of epochs for better accuracy):
 ```bash
-nctl experiment submit cifar100_cnn.py  --name cifar-100-cnn \
+nctl experiment submit cifar100_cnn.py  --name cifar-100-cnn-11 \
 -p workersCount 1 \
 -p processesPerNode 1 \
--p cpu 14 \
--p memory 8Gi \
--p cpus 7 \
---template multinode-tf-training-horovod \
+-p cpu 20 \
+-p memory 18Gi \
+-p cpus 10 \
+--template tf-training-horovod \
 --requirements requirements.txt \
--- --epochs 5 --use-horovod --output-path /mnt/output/experiment --cpu-count 7
+-- --epochs 5 --use-horovod --output-path /mnt/output/experiment --cpu-count 10
 ```
 
 * Alternatively, model can be trained without horovod:
