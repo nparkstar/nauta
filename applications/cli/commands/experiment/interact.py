@@ -63,6 +63,18 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
     """
     Starts an interactive session with Jupyter Notebook.
     """
+
+    if template == "deepcell":
+        # added by npark
+        run_kind_name = RunKinds.DEEPCELL
+        nauta_app_name = NAUTAAppNames.DEEPCELL
+        # exp_name = generate_name("dc")
+    else:
+        # added by npark
+        run_kind_name = RunKinds.JUPYTER
+        nauta_app_name = NAUTAAppNames.JUPYTER
+        # exp_name = generate_name("jup")
+
     current_namespace = get_kubectl_current_context_namespace()
 
     jupyters_number = calculate_number_of_running_jupyters(current_namespace)
@@ -123,13 +135,9 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
             if not name and not filename:
                 if template == "deepcell":
                     # added by npark
-                    run_kind_name=RunKinds.DEEPCELL
-                    nauta_app_name=NAUTAAppNames.DEEPCELL
                     exp_name = generate_name("dc")
                 else:
                     # added by npark
-                    run_kind_name = RunKinds.JUPYTER
-                    nauta_app_name = NAUTAAppNames.JUPYTER
                     exp_name = generate_name("jup")
 
             click.echo(Texts.SUBMITTING_EXPERIMENT_USER_MSG)
