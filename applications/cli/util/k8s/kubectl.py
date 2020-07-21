@@ -82,9 +82,9 @@ def start_port_forwarding(k8s_app_name: NAUTAAppNames, port: int = None, app_nam
 
         app_services = get_app_services(nauta_app_name=k8s_app_name, namespace=namespace, app_name=app_name)
 
-        logger.info(f'k8s_app_name {}'.format(k8s_app_name))
-        logger.info(f'namespace {}'.format(namespace))
-        logger.info(f'app_name {}'.format(app_name))
+        logger.info('k8s_app_name {}'.format(k8s_app_name))
+        logger.info('namespace {}'.format(namespace))
+        logger.info('app_name {}'.format(app_name))
 
         if app_services:
             service_node_port = app_services[0].spec.ports[0].node_port
