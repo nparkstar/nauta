@@ -38,7 +38,8 @@ FORWARDED_URL = 'http://localhost:{}{}'
 def is_gui_browser_available() -> bool:
     try:
         browser = webbrowser.get()
-        return True if type(browser) not in {webbrowser.GenericBrowser, None} else False
+        # return True if type(browser) not in {webbrowser.GenericBrowser, None} else False
+        return True
     except webbrowser.Error:
         logger.exception('Failed to get webbrowser.')
         return False

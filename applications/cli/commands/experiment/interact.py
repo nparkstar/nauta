@@ -67,12 +67,12 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
     if template == "deepcell":
         # added by npark
         run_kind_name = RunKinds.DEEPCELL
-        nauta_app_name = NAUTAAppNames.DEEPCELL
+        # nauta_app_name = NAUTAAppNames.DEEPCELL # web launch를 하기 위해 서비스 프락시를 만들 때 jupyter 이름으로 찾아야 함.
         # exp_name = generate_name("dc")
     else:
         # added by npark
         run_kind_name = RunKinds.JUPYTER
-        nauta_app_name = NAUTAAppNames.JUPYTER
+        # nauta_app_name = NAUTAAppNames.JUPYTER
         # exp_name = generate_name("jup")
 
     current_namespace = get_kubectl_current_context_namespace()
@@ -198,8 +198,8 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
         sys.exit(1)
 
     try:
-        # launch_app(k8s_app_name=NAUTAAppNames.JUPYTER, app_name=name, no_launch=no_launch,
-        launch_app(k8s_app_name=nauta_app_name, app_name=name, no_launch=no_launch,
+        launch_app(k8s_app_name=NAUTAAppNames.JUPYTER, app_name=name, no_launch=no_launch,
+        # launch_app(k8s_app_name=nauta_app_name, app_name=name, no_launch=no_launch,
                    number_of_retries=number_of_retries, url_end=url_end, port=port_number)
     except LaunchError as exe:
         handle_error(logger, exe.message, exe.message)
