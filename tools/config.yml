@@ -55,6 +55,14 @@ shared_images:
     push: False
     args:
       PYTHON_VERSION: 3.7
+  shared/run/gpu-nvidia:
+    version: "tensorflow:2.1.0-gpu-py3-jupyter"
+    required: {}
+    method: build
+    directory: "{{ playbook_dir }}/../../shared-containers/build/tf-base/run/gpu-nvidia"
+    push: False
+    args:
+      PYTHON_VERSION: 3.7
   shared/build/consul:
     version: "v1.1.0"
     required: {}

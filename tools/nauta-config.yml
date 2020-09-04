@@ -16,6 +16,8 @@ export_images:
     value: "{{ image_local_url['nauta/tensorflow/1.12.0py3/base'] }}"
   - name: deepcell
     value: "{{ image_local_url['nauta/anaconda3'] }}"
+  - name: gpu-nvidia
+    value: "{{ image_local_url['nauta/gpu-nvidia'] }}"
   - name: activity-proxy
     value: "{{ image_local_url['nauta/activity-proxy'] }}"
   - name: batch-inference
@@ -121,6 +123,15 @@ local_images:
     directory: "{{ playbook_dir }}/../../nauta-containers/tensorflow/anaconda3"
     args:
       TENSORFLOW_VERSION: 1.14.0
+  nauta/gpu-nvidia:
+    version: "3"
+    required:
+      BASE_IMAGE: "shared/run/gpu-nvidia"
+      METRICS_IMAGE: "shared/build/metrics"
+    method: build
+    directory: "{{ playbook_dir }}/../../nauta-containers/tensorflow/gpu-nvidia"
+    args:
+      TENSORFLOW_VERSION: 2.1.0
   nauta/horovod/py3:
     version: "1.9.0-py3"
     required:
