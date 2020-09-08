@@ -63,7 +63,7 @@ def cancel(ctx: click.Context, name: str, match: str, purge: bool, pod_ids: str,
     """
     if not listed_runs_kinds:
         #listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER]
-        listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER, RunKinds.DEEPCELL]
+        listed_runs_kinds = [RunKinds.TRAINING, RunKinds.JUPYTER, RunKinds.DEEPCELL, RunKinds.GPU_NVIDIA]
 
     # check whether we have runs with a given name
     if name and match:

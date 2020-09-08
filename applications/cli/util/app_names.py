@@ -27,5 +27,6 @@ class NAUTAAppNames(Enum):
     INGRESS = "ingress"
     JUPYTER = "jupyter"
     DEEPCELL = "deepcell"
+    GPU_NVIDIA = "gpu_nvidia"
     GIT_REPO_MANAGER = "gitea"
     GIT_REPO_MANAGER_SSH = "gitea-ssh"

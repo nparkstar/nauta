@@ -150,7 +150,7 @@ def container_resources_to_msg(resources, spaces=9) -> str:
 @common_options()
 @click.pass_context
 def view(ctx: click.Context, experiment_name: str, tensorboard: bool,
-         username: str, accepted_run_kinds = (RunKinds.TRAINING.value, RunKinds.JUPYTER.value, RunKinds.DEEPCELL.value)):
+         username: str, accepted_run_kinds = (RunKinds.TRAINING.value, RunKinds.JUPYTER.value, RunKinds.DEEPCELL.value, RunKinds.GPU_NVIDIA.value)):
          # username: str, accepted_run_kinds=(RunKinds.TRAINING.value, RunKinds.JUPYTER.value)):
     """
     Displays details of an experiment.

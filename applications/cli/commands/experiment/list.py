@@ -29,7 +29,7 @@ from cli_text_consts import ExperimentListCmdTexts as Texts
 logger = initialize_logger(__name__)
 
 #LISTED_RUNS_KINDS = [RunKinds.TRAINING, RunKinds.JUPYTER]
-LISTED_RUNS_KINDS = [RunKinds.TRAINING, RunKinds.JUPYTER, RunKinds.DEEPCELL]
+LISTED_RUNS_KINDS = [RunKinds.TRAINING, RunKinds.JUPYTER, RunKinds.DEEPCELL, RunKinds.GPU_NVIDIA]
 
 
 @click.command(name='list', short_help=Texts.SHORT_HELP, cls=AliasCmd, alias='ls', options_metavar='[options]')

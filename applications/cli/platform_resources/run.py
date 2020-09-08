@@ -46,6 +46,7 @@ class RunKinds(Enum):
     JUPYTER = "jupyter"
     INFERENCE = "inference"
     DEEPCELL = "deepcell"
+    GPU_NVIDIA = "gpu_nvidia"
 
 
 class RunStatus(Enum):
