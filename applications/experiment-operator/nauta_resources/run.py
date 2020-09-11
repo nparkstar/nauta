@@ -32,7 +32,7 @@ class RunKinds(Enum):
     JUPYTER = "jupyter"
     INFERENCE = "inference"
     DEEPCELL = "deepcell"
-    GPU_NVIDIA = "gpu_nvidia"
+    GPU_NVIDIA = "gpu-nvidia"
 
 class RunStatus(Enum):
     QUEUED = 'QUEUED'
