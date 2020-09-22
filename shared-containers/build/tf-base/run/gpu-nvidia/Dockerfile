@@ -21,13 +21,15 @@ RUN pip install --no-cache-dir \
         Pillow==5.4.* \
         h5py==2.9.* \
         ipykernel==5.1.* \
-        jupyterlab \
         matplotlib==3.0.* \
         mock==2.0.* \
         numpy==1.16.* \
         scipy==1.2.* \
         scikit-learn==0.20.* \
         pandas==0.23.* \
-        wheel==0.32.*
+        wheel==0.32.* \
+        jupyterlab==2.2.* \
+        graphviz==2.40.* \
+        python-pydot==1.1.*
 
 RUN python -m ipykernel.kernelspec
