@@ -129,7 +129,7 @@ def main(_):
   callback_params = callbacks(EXPERIMENT_OUTPUT_PATH)
 
   batch_size = 2048
-  epoch_num = 400
+  epoch_num = 300
   model.fit(train_X, train_Y, epochs=epoch_num, batch_size=batch_size, validation_split=0.05, callbacks=callback_params)
 
   # loss, acc = model.evaluate(x_test, y1_test, batch_size=batch_size)
