@@ -30,6 +30,6 @@ RUN pip install --no-cache-dir \
         wheel==0.32.* \
         jupyterlab==2.2.* \
         graphviz==0.14.* \
-        python-pydot==1.1.*
+        pydot==1.4.*
 
 RUN python -m ipykernel.kernelspec
