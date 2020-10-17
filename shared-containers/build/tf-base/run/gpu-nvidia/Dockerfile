@@ -29,7 +29,7 @@ RUN pip install --no-cache-dir \
         pandas==0.23.* \
         wheel==0.32.* \
         jupyterlab==2.2.* \
-        graphviz==2.43.* \
+        graphviz==0.14.* \
         python-pydot==1.1.*
 
 RUN python -m ipykernel.kernelspec
