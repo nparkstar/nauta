@@ -104,8 +104,7 @@ def modify_dockerfile(experiment_folder: str, experiment_name: str, username: st
                 dc_image_repository = f'{NAUTA_REGISTRY_ADDRESS}/{dc_image_name}'
                 dockerfile_temp_content = dockerfile_temp_content + f'FROM {dc_image_repository}'
 
-            #elif line.startswith("FROM nauta/gpu-nvidia"):
-            elif line.startswith("FROM nauta/jupyter-gpu"):
+            elif line.startswith("FROM nauta/gpu-nvidia"):
                 nauta_config_map = NAUTAConfigMap()
                 gpu_nvidia_image_name = nauta_config_map.gpu_nvidia_image_name
                 gpu_nvidia_image_repository = f'{NAUTA_REGISTRY_ADDRESS}/{gpu_nvidia_image_name}'
