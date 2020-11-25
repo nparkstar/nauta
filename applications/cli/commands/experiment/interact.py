@@ -141,7 +141,9 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
                 if template == "deepcell":
                     # added by npark
                     exp_name = generate_name("dc")
-                elif template == "gpu-nvidia":
+                # elif template == "gpu-nvidia":
+                #     exp_name = generate_name("gn")
+                elif template == "jupyter-gpu":
                     exp_name = generate_name("gn")
                 else:
                     # added by npark
