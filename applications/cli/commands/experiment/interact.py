@@ -69,8 +69,11 @@ def interact(ctx: click.Context, name: str, filename: str, pack_param: List[Tupl
         run_kind_name = RunKinds.DEEPCELL
         # nauta_app_name = NAUTAAppNames.DEEPCELL # web launch를 하기 위해 서비스 프락시를 만들 때 jupyter 이름으로 찾아야 함.
         # exp_name = generate_name("dc")
-    elif template == "gpu-nvidia":
+    # elif template == "gpu-nvidia":
+    #     run_kind_name = RunKinds.GPU_NVIDIA
+    elif template == "jupyter-gpu":
         run_kind_name = RunKinds.GPU_NVIDIA
+        # exp_name = generate_name("gn")
     else:
         # added by npark
         run_kind_name = RunKinds.JUPYTER
